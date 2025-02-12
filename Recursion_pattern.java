@@ -5,6 +5,7 @@ class Practical8{
 		Practical8 a=new Practical8();
 		a.displaypattern_1(1,3);
 		a.displaypattern_2(1,3);
+		a.displaypattern_4(1,3);
 	}
 	
 	
@@ -126,5 +127,30 @@ class Practical8{
 	
 	
 //_____________________________________________________________________________________________________________________________________//
+
+	void displaypattern_4(int line,int size)
+	{
+		Ln1(line,size);
+		//Ln2(line,size);
+	}
+	
+	void Ln1(int line,int size)
+	{
+		if(line<=size+1)
+		{
+			Spaces1(line,size, 1);
+			Symbols1(line,1);
+			System.out.print("\n");
+			Ln1(line+1, size);
+		}
+	}
+	void Spaces1(int line,int size, int spaces)
+	{
+		if(spaces<=size+1-line)
+		{
+			System.out.print(" ");
+			Spaces1(line,size, spaces+1 );
+		}
+	}
 }
 	
