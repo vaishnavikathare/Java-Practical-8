@@ -152,5 +152,21 @@ class Practical8{
 			Spaces1(line,size, spaces+1 );
 		}
 	}
+	void Symbols1(int line,int sym)
+	{
+		if(sym<=2*line-1)
+		{
+			if(line%2==0)
+			{
+				System.out.print("/");
+			}
+			else
+			{
+				System.out.print("*");
+			}
+			Symbols1(line, sym+1);
+		}
+	}
+	
 }
 	
